@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.User;
-import utility.BasicEligibility;
-import utility.EligibiltyCheck;
+import utility.*;
 
 @WebServlet(urlPatterns= {"/eligible"})
 public class EligibilityViewController extends HttpServlet {
@@ -30,7 +29,7 @@ public class EligibilityViewController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		boolean spaceEligible;
 		String name=request.getParameter("name");
 		String number=request.getParameter("Number");
 		int age=Integer.parseInt(request.getParameter("age"));
@@ -45,7 +44,9 @@ public class EligibilityViewController extends HttpServlet {
 		user.setAge(age);
 		user.setHeight(height);
 		user.setWeight(weight);
-		
+		user.setCountry(country);
+		utility.EligibilityCheck ec=new utility.EligibilityCheck();
+		spaceEligible=ec.basicEligibilityCheck(user);
 		System.out.println(spaceEligible);
 			if(spaceEligible)
 			{

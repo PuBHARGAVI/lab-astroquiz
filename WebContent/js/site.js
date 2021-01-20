@@ -3,7 +3,7 @@ let questions = [
 	{
 	    id: 1,
 	    question: "Which is the hottest planet in our solar system?",
-	    answer: "Mars",
+	    answer: "Venus",
 	    options: [
 	      "Mercury",
 	      "Earth",
@@ -80,7 +80,7 @@ let questions = [
 	  {
 	    id: 8,
 	    question: "Complete the formula: Speed = _____ / Time",
-	    answer: "float;",
+	    answer: "Distance",
 	    options: [
 	      "Mass",
 	      "Direction",
