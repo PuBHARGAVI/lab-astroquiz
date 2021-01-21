@@ -27,7 +27,7 @@ public class EligibilityCheck extends BasicEligibility implements EligibilityInt
 	@Override
 	public boolean checkUser(User user) {
 		// TODO Auto-generated method stub
-		if((18 <=user.getAge() && (user.getAge() <= 35)) && (155 <=user.getHeight() && user.getHeight()<=170) && (55<=user.getWeight() && user.getWeight()<= 90) && user.getCountry().equals("ProGrad")){
+		if(((18 <=user.getAge()) && (user.getAge() <= 35)) && ((155 <=user.getHeight()) && (user.getHeight()<=170)) && ((55<=user.getWeight()) && (user.getWeight()<= 90)) && user.getCountry().equals("ProGrad")){
 			return true;
 		}
 		return false;
